@@ -22,7 +22,7 @@ public class DbHelper extends SQLiteOpenHelper {
 
     //DATABASE INFO
     public static final String DATABASE_NAME = "GameDatabase";
-    public static final int DATABASE_VERSION = 1;
+    public static final int DATABASE_VERSION = 2;
 
     //table name
     public static final String TABLE_GAMEINFO = "GameInfo";

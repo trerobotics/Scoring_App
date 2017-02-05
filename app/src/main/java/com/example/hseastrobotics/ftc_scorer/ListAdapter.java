@@ -29,7 +29,7 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ListViewHolder
 
         this.context = context;
         this.dataList = dataList1;
-        //this.listener= (Listener) context;
+        //this.listener = (Listener) context;
         inflater = LayoutInflater.from(context);
 
 
@@ -39,7 +39,6 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ListViewHolder
     public ListViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View convertView = inflater.inflate(R.layout.recycler_row, parent, false);
         ListViewHolder viewHolder = new ListViewHolder(convertView);
-        Log.d("recycler", "Received data");
         return viewHolder;
     }
 
@@ -49,14 +48,14 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ListViewHolder
         holder.autoScore.setText(dataList.get(position).autoScore);
         holder.teleOpScore.setText(dataList.get(position).teleOpScore);
         holder.teamName.setText(dataList.get(position).TeamName);
-        holder.delete.setTag(position);
+        //holder.delete.setTag(position);
 
-        holder.delete.setOnClickListener(new View.OnClickListener() {
+        /*holder.delete.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 listener.nameToChnge(dataList.get((Integer) v.getTag()).TeamName);
             }
-        });
+        });*/
     }
 
     @Override
@@ -69,7 +68,7 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ListViewHolder
         TextView autoScore;
         TextView teleOpScore;
         TextView teamName;
-        ImageView delete;
+        //ImageView delete;
 
         public ListViewHolder(View itemView) {
             super(itemView);
@@ -77,7 +76,7 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ListViewHolder
             autoScore       = (TextView)itemView.findViewById(R.id.Auto_score);
             teleOpScore     = (TextView)itemView.findViewById(R.id.TeleOp_Score);
             teamName        = (TextView)itemView.findViewById(R.id.Team_Name);
-            delete          = (ImageView)itemView.findViewById(R.id.delete);
+            //delete          = (ImageView)itemView.findViewById(R.id.delete);
 
         }
     }
