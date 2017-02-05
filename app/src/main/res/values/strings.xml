@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Ftc_Scorer</string>
+    <string name="action_settings">Settings</string>
+    
+    <string-array name="num_of_balls_scored_auto">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+</resources>
