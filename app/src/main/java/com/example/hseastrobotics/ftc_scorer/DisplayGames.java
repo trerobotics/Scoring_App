@@ -19,6 +19,7 @@ public class DisplayGames extends AppCompatActivity {
     RecyclerView recyclerView;
     DbHelper dbHelper;
     ListAdapter adapter;
+    Listener listener;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,7 +45,6 @@ public class DisplayGames extends AppCompatActivity {
         adapter = new ListAdapter(this, dbHelper.getAllGames());
         recyclerView.setAdapter(adapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        Log.d("Display", "received Data");
     }
 
     @Override
@@ -56,9 +56,7 @@ public class DisplayGames extends AppCompatActivity {
         finish();
     }
 
-
-    public void nameToChnge(String name)
-    {
+    public void nameToChnge(String name) {
         dbHelper.deleteRow(name);
 
         adapter = new ListAdapter(this, dbHelper.getAllGames());
