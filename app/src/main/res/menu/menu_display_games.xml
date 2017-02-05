@@ -7,5 +7,4 @@
         android:orderInCategory="100"
         app:showAsAction="never"
         android:checkable="false" />
-    <item android:title="Item" />
 </menu>
