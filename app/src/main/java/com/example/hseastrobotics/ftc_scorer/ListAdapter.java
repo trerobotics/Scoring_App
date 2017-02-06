@@ -48,6 +48,8 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ListViewHolder
         holder.autoScore.setText(dataList.get(position).autoScore);
         holder.teleOpScore.setText(dataList.get(position).teleOpScore);
         holder.teamName.setText(dataList.get(position).TeamName);
+        int totalScore = Integer.valueOf(holder.autoScore.getText().toString()) + Integer.valueOf(holder.teleOpScore.getText().toString());
+        holder.totalScore.setText(String.valueOf(totalScore));
         holder.delete.setTag(position);
 
         holder.delete.setOnClickListener(new View.OnClickListener() {
@@ -68,6 +70,7 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ListViewHolder
         TextView autoScore;
         TextView teleOpScore;
         TextView teamName;
+        TextView totalScore;
         ImageView delete;
 
         public ListViewHolder(View itemView) {
@@ -76,6 +79,7 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ListViewHolder
             autoScore       = (TextView)itemView.findViewById(R.id.Auto_score);
             teleOpScore     = (TextView)itemView.findViewById(R.id.TeleOp_Score);
             teamName        = (TextView)itemView.findViewById(R.id.Team_Name);
+            totalScore      = (TextView)itemView.findViewById(R.id.TotalScore);
             delete          = (ImageView)itemView.findViewById(R.id.Delete);
 
         }
