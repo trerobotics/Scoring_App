@@ -1,132 +1,436 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_new_game"
-    android:layout_width="match_parent"
+    android:layout_width="fill_parent"
     android:layout_height="match_parent"
     tools:context="com.example.hseastrobotics.ftc_scorer.NewGame">
 
-    <TextView
-        android:text="Autonomous"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/Autonomous_Title"
-        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-        android:layout_marginStart="16dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        android:layout_marginLeft="16dp"
-        android:layout_marginEnd="16dp"
-        app:layout_constraintRight_toRightOf="parent"
-        android:layout_marginRight="16dp"
-        android:layout_marginTop="80dp"
-        app:layout_constraintTop_toTopOf="parent" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="match_parent">
 
-    <TextView
-        android:text="Points scored:"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/PointsScoredAuto"
-        android:textAppearance="@style/TextAppearance.AppCompat.Headline"
-        android:layout_marginTop="24dp"
-        app:layout_constraintTop_toBottomOf="@+id/Autonomous_Title"
-        android:layout_marginStart="32dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        android:layout_marginLeft="32dp" />
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="1100dp">
 
-    <EditText
-        android:layout_width="41dp"
-        android:layout_height="wrap_content"
-        android:inputType="number"
-        android:ems="10"
-        android:id="@+id/AutoPointsScored"
-        android:hint="0"
-        app:layout_constraintTop_toTopOf="@+id/PointsScoredAuto"
-        app:layout_constraintBottom_toBottomOf="@+id/PointsScoredAuto"
-        android:layout_marginStart="16dp"
-        app:layout_constraintLeft_toRightOf="@+id/PointsScoredAuto"
-        android:layout_marginLeft="16dp" />
 
-    <TextView
-        android:text="TeleOp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/TeleOp_Title"
-        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-        android:layout_marginEnd="16dp"
-        app:layout_constraintRight_toRightOf="parent"
-        android:layout_marginRight="16dp"
-        android:layout_marginStart="16dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="248dp"
-        app:layout_constraintTop_toTopOf="parent" />
+            <TextView
+                android:text="Team Name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/teamName"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:layout_marginTop="24dp"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginStart="8dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:layout_marginLeft="8dp" />
 
-    <TextView
-        android:text="Points scored:"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/PointsScoredTeleOp"
-        android:textAppearance="@style/TextAppearance.AppCompat.Headline"
-        android:layout_marginTop="24dp"
-        app:layout_constraintTop_toBottomOf="@+id/TeleOp_Title"
-        android:layout_marginStart="32dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        android:layout_marginLeft="32dp" />
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:ems="10"
+                android:id="@+id/editText_teamName"
+                app:layout_constraintTop_toTopOf="@+id/teamName"
+                app:layout_constraintBottom_toBottomOf="@+id/teamName"
+                app:layout_constraintLeft_toRightOf="@+id/teamName"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:hint="Team Name" />
 
-    <EditText
-        android:layout_width="41dp"
-        android:layout_height="wrap_content"
-        android:inputType="number"
-        android:ems="10"
-        android:id="@+id/TeleOpPointsScored"
-        app:layout_constraintLeft_toRightOf="@+id/PointsScoredTeleOp"
-        app:layout_constraintTop_toTopOf="@+id/PointsScoredTeleOp"
-        app:layout_constraintBottom_toBottomOf="@+id/PointsScoredTeleOp"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:hint="0" />
+            <TextView
+                android:text="Autonomous"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/Auto_Title"
+                android:textAppearance="@style/TextAppearance.AppCompat.Display2"
+                android:layout_marginStart="16dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:layout_marginLeft="16dp"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="24dp"
+                app:layout_constraintTop_toBottomOf="@+id/teamName" />
 
-    <Button
-        android:text="Done"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/Add_data"
-        android:layout_marginEnd="16dp"
-        app:layout_constraintRight_toRightOf="parent"
-        android:layout_marginRight="16dp"
-        android:layout_marginStart="16dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        android:layout_marginLeft="16dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_marginBottom="64dp"
-        android:background="@color/colorAccent"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large.Inverse" />
+            <TextView
+                android:text="Center Vortex"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/Title_ParkedOnCenterVortex"
+                app:layout_constraintTop_toBottomOf="@+id/Auto_Title"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_marginRight="16dp"
+                android:layout_marginStart="16dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="24dp"
+                android:textAppearance="@style/TextAppearance.AppCompat.Title" />
 
-    <TextView
-        android:text="Team Name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/teamName"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        android:layout_marginTop="16dp"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginStart="16dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        android:layout_marginLeft="16dp" />
+            <Button
+                android:text="Partially"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/button_partialCenter"
+                android:background="@color/colorPrimary"
+                android:textAppearance="@style/TextAppearance.AppCompat.Widget.Button.Inverse"
+                android:layout_marginTop="16dp"
+                app:layout_constraintTop_toBottomOf="@+id/Title_ParkedOnCenterVortex"
+                android:layout_marginStart="64dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:layout_marginLeft="64dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp" />
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:ems="10"
-        android:id="@+id/editText_teamName"
-        android:hint="Team Name"
-        android:textSize="14sp"
-        app:layout_constraintTop_toTopOf="@+id/teamName"
-        app:layout_constraintBottom_toBottomOf="@+id/teamName"
-        android:layout_marginStart="8dp"
-        app:layout_constraintLeft_toRightOf="@+id/teamName"
-        android:layout_marginLeft="8dp" />
+            <Button
+                android:text="Fully"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/button_fullyCenter"
+                android:background="@color/colorPrimaryDark"
+                android:textAppearance="@style/TextAppearance.AppCompat.Widget.Button.Inverse"
+                android:layout_marginTop="16dp"
+                app:layout_constraintTop_toBottomOf="@+id/Title_ParkedOnCenterVortex"
+                android:layout_marginEnd="64dp"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_marginRight="64dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp" />
 
-</android.support.constraint.ConstraintLayout>
+            <TextView
+                android:text="Corner Vortex"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/Title_ParkedOnCorner"
+                android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_marginRight="16dp"
+                android:layout_marginStart="16dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="24dp"
+                app:layout_constraintTop_toBottomOf="@+id/button_fullyCenter" />
+
+            <Button
+                android:text="partially"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/button_partialCorner"
+                android:background="@color/colorPrimary"
+                android:textAppearance="@style/TextAppearance.AppCompat.Widget.Button.Inverse"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:layout_marginTop="16dp"
+                app:layout_constraintTop_toBottomOf="@+id/Title_ParkedOnCorner"
+                android:layout_marginStart="64dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:layout_marginLeft="64dp" />
+
+            <Button
+                android:text="fully"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/button_fullyCorner"
+                android:layout_marginTop="16dp"
+                app:layout_constraintTop_toBottomOf="@+id/Title_ParkedOnCorner"
+                android:layout_marginEnd="64dp"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_marginRight="64dp"
+                android:background="@color/colorPrimaryDark"
+                android:textAppearance="@style/TextAppearance.AppCompat.Widget.Button.Inverse"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp" />
+
+            <TextView
+                android:text="Particles in Center Vortex"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/Title_particleInCenterAuto"
+                android:layout_marginTop="24dp"
+                app:layout_constraintTop_toBottomOf="@+id/button_partialCorner"
+                android:layout_marginStart="16dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:layout_marginLeft="16dp"
+                android:textAppearance="@style/TextAppearance.AppCompat.Title" />
+
+            <EditText
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:ems="10"
+                android:id="@+id/particlesInCenterAuto"
+                app:layout_constraintTop_toTopOf="@+id/Title_particleInCenterAuto"
+                app:layout_constraintBottom_toBottomOf="@+id/Title_particleInCenterAuto"
+                android:layout_marginStart="24dp"
+                app:layout_constraintLeft_toRightOf="@+id/Title_particleInCenterAuto"
+                android:layout_marginLeft="24dp"
+                android:hint="0" />
+
+            <TextView
+                android:text="Particles in Corner Vortex"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/Title_particleInCornerAuto"
+                android:layout_marginTop="16dp"
+                app:layout_constraintTop_toBottomOf="@+id/particlesInCenterAuto"
+                android:layout_marginStart="16dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:layout_marginLeft="16dp"
+                android:textAppearance="@style/TextAppearance.AppCompat.Title" />
+
+            <EditText
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:ems="10"
+                android:id="@+id/particlesInCornerAuto"
+                app:layout_constraintTop_toTopOf="@+id/Title_particleInCornerAuto"
+                app:layout_constraintBottom_toBottomOf="@+id/Title_particleInCornerAuto"
+                app:layout_constraintVertical_bias="0.32999998"
+                android:layout_marginStart="24dp"
+                app:layout_constraintLeft_toRightOf="@+id/Title_particleInCornerAuto"
+                android:layout_marginLeft="24dp"
+                android:hint="0" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/BallOnPlayingField"
+                android:text="Ball on playing field"
+                android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                android:layout_marginTop="24dp"
+                app:layout_constraintTop_toBottomOf="@+id/Title_particleInCornerAuto"
+                android:layout_marginStart="16dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:layout_marginLeft="16dp" />
+
+            <Switch
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/switch_ballOnplayingField"
+                android:checked="false"
+                app:layout_constraintTop_toTopOf="@+id/BallOnPlayingField"
+                app:layout_constraintBottom_toBottomOf="@+id/BallOnPlayingField"
+                android:layout_marginStart="24dp"
+                app:layout_constraintLeft_toRightOf="@+id/BallOnPlayingField"
+                android:layout_marginLeft="24dp" />
+
+            <TextView
+                android:text="Number of beacons pressed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/Beacons_pressed"
+                android:layout_marginTop="24dp"
+                app:layout_constraintTop_toBottomOf="@+id/BallOnPlayingField"
+                android:layout_marginStart="16dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:layout_marginLeft="16dp"
+                android:textAppearance="@style/TextAppearance.AppCompat.Title" />
+
+            <EditText
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:ems="10"
+                android:id="@+id/NumOfBeaconsPressedAuto"
+                app:layout_constraintTop_toTopOf="@+id/Beacons_pressed"
+                app:layout_constraintBottom_toBottomOf="@+id/Beacons_pressed"
+                android:layout_marginStart="24dp"
+                app:layout_constraintLeft_toRightOf="@+id/Beacons_pressed"
+                android:layout_marginLeft="24dp"
+                android:hint="0" />
+
+            <TextView
+                android:text="TeleOp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/TeleOp_Title"
+                android:textAppearance="@style/TextAppearance.AppCompat.Display2"
+                android:layout_marginTop="24dp"
+                app:layout_constraintTop_toBottomOf="@+id/Beacons_pressed"
+                android:layout_marginStart="16dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:layout_marginLeft="16dp"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_marginRight="16dp" />
+
+            <TextView
+                android:text="Particles in Center Vortex"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/ParticlesInCenterVortexTeleOp"
+                android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                app:layout_constraintTop_toBottomOf="@+id/TeleOp_Title"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:layout_marginLeft="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="24dp" />
+
+            <EditText
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:hint="0"
+                android:ems="10"
+                android:id="@+id/NumOfParticlesCenterTeleOp"
+                android:layout_width="50dp"
+                app:layout_constraintTop_toTopOf="@+id/ParticlesInCenterVortexTeleOp"
+                app:layout_constraintBottom_toBottomOf="@+id/ParticlesInCenterVortexTeleOp"
+                android:layout_marginStart="8dp"
+                app:layout_constraintLeft_toRightOf="@+id/ParticlesInCenterVortexTeleOp"
+                android:layout_marginLeft="8dp" />
+
+            <TextView
+                android:text="Particles in Corner Vortex"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/particlesinCornerVortexTeleop"
+                android:layout_marginTop="24dp"
+                app:layout_constraintTop_toBottomOf="@+id/ParticlesInCenterVortexTeleOp"
+                android:layout_marginStart="16dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:layout_marginLeft="16dp"
+                android:textAppearance="@style/TextAppearance.AppCompat.Title" />
+
+            <EditText
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:ems="10"
+                android:id="@+id/numOfParticlesCornerTeleOp"
+                android:hint="0"
+                android:layout_marginStart="24dp"
+                app:layout_constraintLeft_toRightOf="@+id/particlesinCornerVortexTeleop"
+                android:layout_marginLeft="24dp"
+                app:layout_constraintTop_toTopOf="@+id/particlesinCornerVortexTeleop"
+                app:layout_constraintBottom_toBottomOf="@+id/particlesinCornerVortexTeleop" />
+
+            <TextView
+                android:text="Number Of Beacons Pressed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/Beacons_pressedTeleOp"
+                android:layout_marginTop="24dp"
+                app:layout_constraintTop_toBottomOf="@+id/endGame"
+                android:layout_marginStart="16dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:layout_marginLeft="16dp"
+                android:textAppearance="@style/TextAppearance.AppCompat.Title" />
+
+            <TextView
+                android:text="End Game"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/endGame"
+                android:textAppearance="@style/TextAppearance.AppCompat.Display2"
+                android:layout_marginTop="24dp"
+                app:layout_constraintTop_toBottomOf="@+id/particlesinCornerVortexTeleop"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_marginRight="16dp"
+                android:layout_marginStart="16dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:layout_marginLeft="16dp" />
+
+            <EditText
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:ems="10"
+                android:id="@+id/numOfBeaconsPressedTeleOp"
+                app:layout_constraintTop_toTopOf="@+id/Beacons_pressedTeleOp"
+                app:layout_constraintBottom_toBottomOf="@+id/Beacons_pressedTeleOp"
+                android:layout_marginStart="24dp"
+                app:layout_constraintLeft_toRightOf="@+id/Beacons_pressedTeleOp"
+                android:layout_marginLeft="24dp"
+                android:hint="0" />
+
+            <TextView
+                android:text="Cap Ball"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/CapBall_Title"
+                android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                android:layout_marginTop="24dp"
+                app:layout_constraintTop_toBottomOf="@+id/Beacons_pressedTeleOp"
+                android:layout_marginStart="16dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:layout_marginLeft="16dp"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_marginRight="16dp" />
+
+            <Button
+                android:text="Raised below 30in"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/capBallBelow30"
+                android:background="@color/colorAccent"
+                android:layout_marginTop="24dp"
+                app:layout_constraintTop_toBottomOf="@+id/CapBall_Title"
+                android:layout_marginStart="16dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:layout_marginLeft="16dp"
+                android:textAppearance="@style/TextAppearance.AppCompat.Widget.Button.Inverse"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp" />
+
+            <Button
+                android:text="Raised Above 30in"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/capBallAbove30"
+                android:background="@color/colorPrimary"
+                android:textAppearance="@style/TextAppearance.AppCompat.Widget.Button.Inverse"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:layout_marginTop="24dp"
+                app:layout_constraintTop_toBottomOf="@+id/CapBall_Title"
+                android:layout_marginStart="8dp"
+                app:layout_constraintLeft_toRightOf="@+id/capBallBelow30"
+                android:layout_marginLeft="8dp"
+                app:layout_constraintRight_toLeftOf="@+id/cappedBall"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                app:layout_constraintHorizontal_bias="1.0" />
+
+            <Button
+                android:text="Cap Ball"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/cappedBall"
+                android:background="@color/colorPrimaryDark"
+                android:textAppearance="@style/TextAppearance.AppCompat.Widget.Button.Inverse"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_marginRight="16dp"
+                app:layout_constraintTop_toBottomOf="@+id/CapBall_Title"
+                android:layout_marginTop="24dp" />
+
+            <Button
+                android:text="Done"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/Add_Data"
+                android:layout_marginTop="32dp"
+                app:layout_constraintTop_toBottomOf="@+id/capBallAbove30"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_marginRight="16dp"
+                android:layout_marginStart="16dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:layout_marginLeft="16dp"
+                android:textAppearance="@style/TextAppearance.AppCompat.Widget.Button.Inverse"
+                android:background="@color/colorAccent" />
+
+        </android.support.constraint.ConstraintLayout>
+
+    </LinearLayout>
+
+</ScrollView>
