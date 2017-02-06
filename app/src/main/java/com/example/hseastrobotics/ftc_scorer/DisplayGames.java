@@ -14,12 +14,11 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
 
-public class DisplayGames extends AppCompatActivity {
+public class DisplayGames extends AppCompatActivity implements Listener{
 
     RecyclerView recyclerView;
     DbHelper dbHelper;
     ListAdapter adapter;
-    Listener listener;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

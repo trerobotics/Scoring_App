@@ -136,10 +136,10 @@ public class DbHelper extends SQLiteOpenHelper {
 
         try {
             db.beginTransaction();
-            db.execSQL("delete from " + TABLE_GAMEINFO + " where name = '" + name + "'");
+            db.execSQL("delete from " + TABLE_GAMEINFO + " where teamName = '" + name + "'");
             db.setTransactionSuccessful();
         } catch (SQLException e) {
-            Log.d(TAG, "Error while trying to delete game deatil");
+            Log.d(TAG, "Error while trying to delete  game info");
         } finally {
             db.endTransaction();
         }
