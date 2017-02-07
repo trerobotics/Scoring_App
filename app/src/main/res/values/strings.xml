@@ -1,4 +1,7 @@
 <resources>
-    <string name="app_name">FTC score keeper</string>
-    <string name="action_settings">Settings</string>
+    <string name="app_name">FTC Score Keeper</string>
+    <string name="interstitial_ad_sample">Interstitial Ad Sample</string>
+        <string name="ad_id_interstitial">ca-app-pub-7744357389506091/9257560120</string>
 </resources>
+
+

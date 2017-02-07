@@ -86,11 +86,9 @@ public class DbHelper extends SQLiteOpenHelper {
 
             db.insertOrThrow(TABLE_GAMEINFO, null, values);
             db.setTransactionSuccessful();
-            Log.d(TAG, "Post successful");
 
         } catch (SQLException e) {
             e.printStackTrace();
-            Log.d(TAG, "Error while trying to add post to database");
         } finally {
             db.endTransaction();
         }
@@ -119,7 +117,7 @@ public class DbHelper extends SQLiteOpenHelper {
                 } while (cursor.moveToNext());
             }
         } catch (Exception e) {
-            Log.d(TAG, "Error while trying to get posts from database");
+
         } finally {
             if (cursor != null && !cursor.isClosed())
             {
