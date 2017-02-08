@@ -14,7 +14,7 @@
 
         <android.support.constraint.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="1100dp">
+            android:layout_height="1500dp">
 
 
             <TextView
@@ -77,18 +77,21 @@
 
             <Button
                 android:text="Partially"
-                android:layout_width="0dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/button_partialCenter"
                 android:background="@color/colorPrimary"
                 android:textAppearance="@style/TextAppearance.AppCompat.Widget.Button.Inverse"
-                android:layout_marginTop="16dp"
+                android:layout_marginTop="24dp"
                 app:layout_constraintTop_toBottomOf="@+id/Title_ParkedOnCenterVortex"
-                android:layout_marginStart="64dp"
+                android:layout_marginStart="16dp"
                 app:layout_constraintLeft_toLeftOf="parent"
-                android:layout_marginLeft="64dp"
+                android:layout_marginLeft="16dp"
                 android:paddingLeft="10dp"
-                android:paddingRight="10dp" />
+                android:paddingRight="10dp"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_marginRight="16dp" />
 
             <Button
                 android:text="Fully"
@@ -97,12 +100,16 @@
                 android:id="@+id/button_fullyCenter"
                 android:background="@color/colorPrimaryDark"
                 android:textAppearance="@style/TextAppearance.AppCompat.Widget.Button.Inverse"
-                android:layout_marginTop="16dp"
-                app:layout_constraintTop_toBottomOf="@+id/Title_ParkedOnCenterVortex"
                 app:layout_constraintRight_toRightOf="parent"
                 android:paddingLeft="10dp"
                 android:paddingRight="10dp"
-                app:layout_constraintLeft_toRightOf="@+id/button_partialCenter" />
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginStart="16dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="24dp"
+                app:layout_constraintTop_toBottomOf="@+id/button_partialCenter" />
 
             <TextView
                 android:text="Corner Vortex"
@@ -130,36 +137,42 @@
                 android:paddingRight="10dp"
                 android:layout_marginTop="16dp"
                 app:layout_constraintTop_toBottomOf="@+id/Title_ParkedOnCorner"
-                android:layout_marginStart="64dp"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_marginRight="16dp"
+                android:layout_marginStart="16dp"
                 app:layout_constraintLeft_toLeftOf="parent"
-                android:layout_marginLeft="64dp" />
+                android:layout_marginLeft="16dp" />
 
             <Button
                 android:text="fully"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/button_fullyCorner"
-                android:layout_marginTop="16dp"
-                app:layout_constraintTop_toBottomOf="@+id/Title_ParkedOnCorner"
-                android:layout_marginEnd="64dp"
+                android:layout_marginEnd="16dp"
                 app:layout_constraintRight_toRightOf="parent"
-                android:layout_marginRight="64dp"
+                android:layout_marginRight="16dp"
                 android:background="@color/colorPrimaryDark"
                 android:textAppearance="@style/TextAppearance.AppCompat.Widget.Button.Inverse"
                 android:paddingLeft="10dp"
-                android:paddingRight="10dp" />
+                android:paddingRight="10dp"
+                android:layout_marginStart="16dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                app:layout_constraintTop_toBottomOf="@+id/button_partialCorner" />
 
             <TextView
                 android:text="Particles in Center Vortex"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/Title_particleInCenterAuto"
-                android:layout_marginTop="24dp"
-                app:layout_constraintTop_toBottomOf="@+id/button_partialCorner"
                 android:layout_marginStart="16dp"
                 app:layout_constraintLeft_toLeftOf="parent"
                 android:layout_marginLeft="16dp"
-                android:textAppearance="@style/TextAppearance.AppCompat.Title" />
+                android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                android:layout_marginTop="24dp"
+                app:layout_constraintTop_toBottomOf="@+id/button_fullyCorner" />
 
             <EditText
                 android:layout_width="50dp"
@@ -374,14 +387,17 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/capBallBelow30"
                 android:background="@color/colorAccent"
-                android:layout_marginTop="24dp"
-                app:layout_constraintTop_toBottomOf="@+id/CapBall_Title"
-                android:layout_marginStart="16dp"
-                app:layout_constraintLeft_toLeftOf="parent"
-                android:layout_marginLeft="16dp"
                 android:textAppearance="@style/TextAppearance.AppCompat.Widget.Button.Inverse"
                 android:paddingLeft="5dp"
-                android:paddingRight="5dp" />
+                android:paddingRight="5dp"
+                android:layout_marginTop="24dp"
+                app:layout_constraintTop_toBottomOf="@+id/CapBall_Title"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_marginRight="16dp"
+                android:layout_marginStart="16dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:layout_marginLeft="16dp" />
 
             <Button
                 android:text="Raised Above 30in"
@@ -392,15 +408,14 @@
                 android:textAppearance="@style/TextAppearance.AppCompat.Widget.Button.Inverse"
                 android:paddingLeft="5dp"
                 android:paddingRight="5dp"
-                android:layout_marginTop="24dp"
-                app:layout_constraintTop_toBottomOf="@+id/CapBall_Title"
-                android:layout_marginStart="8dp"
-                app:layout_constraintLeft_toRightOf="@+id/capBallBelow30"
-                android:layout_marginLeft="8dp"
-                app:layout_constraintRight_toLeftOf="@+id/cappedBall"
-                android:layout_marginEnd="8dp"
-                android:layout_marginRight="8dp"
-                app:layout_constraintHorizontal_bias="1.0" />
+                android:layout_marginTop="16dp"
+                app:layout_constraintTop_toBottomOf="@+id/capBallBelow30"
+                android:layout_marginStart="16dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:layout_marginLeft="16dp"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_marginRight="16dp" />
 
             <Button
                 android:text="Cap Ball"
@@ -412,16 +427,17 @@
                 android:layout_marginEnd="16dp"
                 app:layout_constraintRight_toRightOf="parent"
                 android:layout_marginRight="16dp"
-                app:layout_constraintTop_toBottomOf="@+id/CapBall_Title"
-                android:layout_marginTop="24dp" />
+                android:layout_marginTop="24dp"
+                app:layout_constraintTop_toBottomOf="@+id/capBallAbove30"
+                android:layout_marginStart="16dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:layout_marginLeft="16dp" />
 
             <Button
                 android:text="Done"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/Add_Data"
-                android:layout_marginTop="32dp"
-                app:layout_constraintTop_toBottomOf="@+id/capBallAbove30"
                 android:layout_marginEnd="16dp"
                 app:layout_constraintRight_toRightOf="parent"
                 android:layout_marginRight="16dp"
@@ -429,7 +445,9 @@
                 app:layout_constraintLeft_toLeftOf="parent"
                 android:layout_marginLeft="16dp"
                 android:textAppearance="@style/TextAppearance.AppCompat.Widget.Button.Inverse"
-                android:background="@color/colorAccent" />
+                android:background="@color/colorAccent"
+                android:layout_marginTop="64dp"
+                app:layout_constraintTop_toBottomOf="@+id/cappedBall" />
 
         </android.support.constraint.ConstraintLayout>
 
