@@ -14,7 +14,7 @@
 
         <android.support.constraint.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="1100dp">
+            android:layout_height="1300dp">
 
 
             <TextView
@@ -23,7 +23,7 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/teamName"
                 android:textAppearance="@style/TextAppearance.AppCompat.Large"
-                android:layout_marginTop="24dp"
+                android:layout_marginTop="32dp"
                 app:layout_constraintTop_toTopOf="parent"
                 android:layout_marginStart="8dp"
                 app:layout_constraintLeft_toLeftOf="parent"
@@ -40,7 +40,8 @@
                 app:layout_constraintLeft_toRightOf="@+id/teamName"
                 android:layout_marginStart="16dp"
                 android:layout_marginLeft="16dp"
-                android:hint="Team Name" />
+                android:hint="Team Name"
+                android:selectAllOnFocus="false" />
 
             <TextView
                 android:text="Autonomous"
@@ -372,14 +373,17 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/capBallBelow30"
                 android:background="@color/colorAccent"
+                android:textAppearance="@style/TextAppearance.AppCompat.Widget.Button.Inverse"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
                 android:layout_marginTop="24dp"
                 app:layout_constraintTop_toBottomOf="@+id/CapBall_Title"
                 android:layout_marginStart="16dp"
                 app:layout_constraintLeft_toLeftOf="parent"
                 android:layout_marginLeft="16dp"
-                android:textAppearance="@style/TextAppearance.AppCompat.Widget.Button.Inverse"
-                android:paddingLeft="5dp"
-                android:paddingRight="5dp" />
+                android:layout_marginEnd="16dp"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_marginRight="16dp" />
 
             <Button
                 android:text="Raised Above 30in"
@@ -391,14 +395,13 @@
                 android:paddingLeft="5dp"
                 android:paddingRight="5dp"
                 android:layout_marginTop="24dp"
-                app:layout_constraintTop_toBottomOf="@+id/CapBall_Title"
-                android:layout_marginStart="8dp"
-                app:layout_constraintLeft_toRightOf="@+id/capBallBelow30"
-                android:layout_marginLeft="8dp"
-                app:layout_constraintRight_toLeftOf="@+id/cappedBall"
-                android:layout_marginEnd="8dp"
-                android:layout_marginRight="8dp"
-                app:layout_constraintHorizontal_bias="1.0" />
+                app:layout_constraintTop_toBottomOf="@+id/capBallBelow30"
+                android:layout_marginStart="16dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:layout_marginLeft="16dp"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_marginRight="16dp" />
 
             <Button
                 android:text="Cap Ball"
@@ -407,19 +410,20 @@
                 android:id="@+id/cappedBall"
                 android:background="@color/colorPrimaryDark"
                 android:textAppearance="@style/TextAppearance.AppCompat.Widget.Button.Inverse"
+                android:layout_marginTop="24dp"
+                app:layout_constraintTop_toBottomOf="@+id/capBallAbove30"
+                android:layout_marginStart="16dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:layout_marginLeft="16dp"
                 android:layout_marginEnd="16dp"
                 app:layout_constraintRight_toRightOf="parent"
-                android:layout_marginRight="16dp"
-                app:layout_constraintTop_toBottomOf="@+id/CapBall_Title"
-                android:layout_marginTop="24dp" />
+                android:layout_marginRight="16dp" />
 
             <Button
                 android:text="Done"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/Add_Data"
-                android:layout_marginTop="32dp"
-                app:layout_constraintTop_toBottomOf="@+id/capBallAbove30"
                 android:layout_marginEnd="16dp"
                 app:layout_constraintRight_toRightOf="parent"
                 android:layout_marginRight="16dp"
@@ -427,7 +431,9 @@
                 app:layout_constraintLeft_toLeftOf="parent"
                 android:layout_marginLeft="16dp"
                 android:textAppearance="@style/TextAppearance.AppCompat.Widget.Button.Inverse"
-                android:background="@color/colorAccent" />
+                android:background="@color/colorAccent"
+                android:layout_marginTop="48dp"
+                app:layout_constraintTop_toBottomOf="@+id/cappedBall" />
 
         </android.support.constraint.ConstraintLayout>
 

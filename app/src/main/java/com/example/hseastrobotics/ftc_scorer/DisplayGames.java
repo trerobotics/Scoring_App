@@ -31,7 +31,7 @@ public class DisplayGames extends AppCompatActivity implements Listener{
         setSupportActionBar(toolbar);
 
         mInterstitialAd = new InterstitialAd(this);
-        mInterstitialAd.setAdUnitId("ca-app-pub-7744357389506091/9257560120");
+        mInterstitialAd.setAdUnitId("ca-app-pub-3940256099942544/1033173712");
 
         mInterstitialAd.setAdListener(new AdListener() {
             @Override
