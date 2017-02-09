@@ -1,4 +1,4 @@
-package com.example.hseastrobotics.ftc_scorer;
+package com.hserobotics.hseastrobotics.ftc_scorer;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -31,7 +31,7 @@ public class DisplayGames extends AppCompatActivity implements Listener{
         setSupportActionBar(toolbar);
 
         mInterstitialAd = new InterstitialAd(this);
-        mInterstitialAd.setAdUnitId("ca-app-pub-3940256099942544/1033173712");
+        mInterstitialAd.setAdUnitId("ca-app-pub-5976590971275936/6961254408");
 
         mInterstitialAd.setAdListener(new AdListener() {
             @Override

@@ -1,4 +1,4 @@
-package com.example.hseastrobotics.ftc_scorer;
+package com.hserobotics.hseastrobotics.ftc_scorer;
 
 import java.io.Serializable;
 

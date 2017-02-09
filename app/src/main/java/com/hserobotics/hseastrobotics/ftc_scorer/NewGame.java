@@ -1,11 +1,10 @@
-package com.example.hseastrobotics.ftc_scorer;
+package com.hserobotics.hseastrobotics.ftc_scorer;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.view.animation.Interpolator;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Switch;

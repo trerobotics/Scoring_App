@@ -1,4 +1,4 @@
-package com.example.hseastrobotics.ftc_scorer;
+package com.hserobotics.hseastrobotics.ftc_scorer;
 
 /**
  * Created by hseastrobotics on 2/4/2017.

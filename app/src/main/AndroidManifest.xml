@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.hseastrobotics.ftc_scorer"
-    android:versionCode="1"
-    android:versionName="beta">
+    package="com.hserobotics.hseastrobotics.ftc_scorer"
+    android:versionCode= '1'
+    android:versionName="1.1">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
@@ -10,12 +10,12 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/score_keeper_logo"
+        android:icon="@mipmap/score_keeper_app_hdpi"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".DisplayGames"
+            android:name="com.hserobotics.hseastrobotics.ftc_scorer.DisplayGames"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
@@ -24,7 +24,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".NewGame">
+        <activity android:name="com.hserobotics.hseastrobotics.ftc_scorer.NewGame">
             <meta-data
                 android:name="com.google.android.gms.version"
                 android:value="@integer/google_play_services_version" />
